@@ -1,5 +1,4 @@
-# Copyright HeteroCL authors. All Rights Reserved.
-# SPDX-License-Identifier: Apache-2.0
+
 
 FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
@@ -14,7 +13,7 @@ RUN sudo apt-get update && apt-get -y install git wget vim gdb gcc make software
 RUN sudo apt-get install libstdc++6
 RUN sudo apt install libtinfo5 libncurses5
 
-# install gcc-9
+
 RUN sudo apt -y install build-essential && \
     sudo apt-get update && \
     sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa -y && \
@@ -41,9 +40,9 @@ RUN apt-get update \
 
 ENV LANG en_US.UTF-8
 
-# install cmake
+
 WORKDIR /root/
 
 ENV DISPLAY=:0
-# Run Firefox
+
 CMD ["bash"]
